@@ -58,17 +58,3 @@ Desenvolvido por [Adauri Developer](https://www.google.com/search?q=https://gith
 
 ---
 
-### Como atualizar o GitHub com o README:
-
-Depois de salvar o arquivo no seu PC, rode estes comandos no terminal para enviar a atualização:
-
-1.  `git add README.md`
-2.  `git commit -m "docs: adiciona readme detalhado"`
-3.  `git push`
-
-### Dica Visual
-Se você estiver no VS Code / Code - OSS, aperte `Ctrl + Shift + V` com o arquivo `README.md` aberto. Ele vai abrir um **Preview** para você ver como o texto formatado vai aparecer bonitão lá no site do GitHub!
-
-**O que acha de darmos o próximo passo no código?** Podemos criar uma função para validar se o usuário digitou números válidos ou letras por engano. Bora?
-
-```
