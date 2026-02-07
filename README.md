@@ -1,6 +1,3 @@
-Com certeza! Aqui está o conteúdo limpo, pronto para você copiar e colar no seu arquivo `README.md`:
-
-```markdown
 # Calculadora de IMC em Go 🚀
 
 Este é o meu primeiro projeto desenvolvido em **Go**, criado durante meus estudos iniciais da linguagem. O objetivo é praticar a sintaxe básica, entrada de dados e conversão de tipos.
@@ -47,4 +44,6 @@ go run main.go
 ---
 
 Desenvolvido com ☕ por [Adauri Developer](https://www.google.com/search?q=https://github.com/adaurideveloper-sudo)
+
+
 
