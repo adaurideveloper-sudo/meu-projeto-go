@@ -1,13 +1,7 @@
-Com certeza! Um bom `README.md` é o cartão de visitas do seu repositório. Ele explica o que o projeto faz e como outras pessoas (ou você mesmo no futuro) podem rodar o código.
-
-Como você está usando o **Code - OSS**, basta criar um novo arquivo na raiz do projeto chamado `README.md` e colar o conteúdo abaixo.
-
----
-
-### Sugestão de Conteúdo para o seu README:
+Com certeza! Aqui está o conteúdo limpo, pronto para você copiar e colar no seu arquivo `README.md`:
 
 ```markdown
-# Calculadora de IMC em Go 
+# Calculadora de IMC em Go 🚀
 
 Este é o meu primeiro projeto desenvolvido em **Go**, criado durante meus estudos iniciais da linguagem. O objetivo é praticar a sintaxe básica, entrada de dados e conversão de tipos.
 
@@ -17,10 +11,10 @@ O programa é uma ferramenta de linha de comando que calcula o Índice de Massa 
 ## 🛠️ Tecnologias e Ambiente
 * **Linguagem:** Go (Golang)
 * **SO:** CachyOS (Linux)
-* **Editor:** Code - OSS
+* **Editor:** Code - OSS (VS Code)
 
 ## 🚀 Como rodar o projeto
-Certifique-se de ter o Go instalado em sua máquina.
+Certifique-se de ter o [Go instalado](https://go.dev/doc/install).
 
 1. Clone o repositório:
    ```bash
@@ -45,16 +39,12 @@ go run main.go
 
 ## 🧠 O que eu aprendi:
 
-* Uso de pacotes como `fmt`, `os`, `bufio` e `strconv`.
-* Manipulação de strings e limpeza de inputs (`strings.TrimSpace`).
-* Declaração curta de variáveis com `:=`.
+* Uso de pacotes essenciais: `fmt`, `os`, `bufio` e `strconv`.
+* Manipulação de strings e limpeza de inputs com `strings.TrimSpace`.
+* Declaração curta de variáveis (`:=`).
 * Tratamento básico de erros com o identificador em branco `_`.
 
 ---
 
-Desenvolvido por [Adauri Developer](https://www.google.com/search?q=https://github.com/adaurideveloper-sudo)
-
-```
-
-
+Desenvolvido com ☕ por [Adauri Developer](https://www.google.com/search?q=https://github.com/adaurideveloper-sudo)
 
