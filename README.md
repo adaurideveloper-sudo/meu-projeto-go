@@ -15,8 +15,7 @@ Certifique-se de ter o [Go instalado](https://go.dev/doc/install).
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/adaurideveloper-sudo/meu-projeto-go.git](https://github.com/adaurideveloper-sudo/meu-projeto-go.git)
-
+   git clone https://github.com/adaurideveloper-sudo/meu-projeto-go.git
 ```
 
 2. Entre na pasta:
