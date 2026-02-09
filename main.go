@@ -11,46 +11,52 @@ import (
 func main() {
 	reader := bufio.NewReader(os.Stdin)
 
-	fmt.Println("--- Calculadora de IMC (Versão Robusta) ---")
+	// O loop for sem condições funciona como um "enquanto for verdade" (loop infinito)
+	for {
+		fmt.Println("\n--- Calculadora de IMC (Digite 'sair' para encerrar) ---")
 
-	// Lendo o Peso
-	fmt.Println("Digite o seu peso (ex: 70,5 ou 70.5): ")
-	inputPeso, _ := reader.ReadString('\n')
-	inputPeso = strings.TrimSpace(inputPeso)
-	// Tratamento: troca vírgula por ponto para o sistema entender
-	inputPeso = strings.ReplaceAll(inputPeso, ",", ".")
-	peso, err := strconv.ParseFloat(inputPeso, 64)
+		fmt.Print("Digite o seu peso: ")
+		inputPeso, _ := reader.ReadString('\n')
+		inputPeso = strings.TrimSpace(inputPeso)
 
-	if err != nil {
-		fmt.Println("Erro: Peso inválido. Use apenas números.")
-		return
-	}
+		// Opção para o usuário encerrar o programa com elegância
+		if strings.ToLower(inputPeso) == "sair" {
+			fmt.Println("Encerrando... Até logo!")
+			break // Sai do loop for
+		}
 
-	// Lendo a Altura
-	fmt.Println("Digite a sua altura (ex: 1,75 ou 1.75): ")
-	inputAltura, _ := reader.ReadString('\n')
-	inputAltura = strings.TrimSpace(inputAltura)
-	// Tratamento: troca vírgula por ponto
-	inputAltura = strings.ReplaceAll(inputAltura, ",", ".")
-	altura, err := strconv.ParseFloat(inputAltura, 64)
+		inputPeso = strings.ReplaceAll(inputPeso, ",", ".")
+		peso, err := strconv.ParseFloat(inputPeso, 64)
 
-	if err != nil {
-		fmt.Println("Erro: Altura inválida. Use apenas números.")
-		return
-	}
+		if err != nil || peso <= 0 {
+			fmt.Println("Erro: Digite um peso válido e maior que zero.")
+			continue // Pula o resto e volta para o início do for
+		}
 
-	// Calculo
-	imc := peso / (altura * altura)
+		fmt.Print("Digite a sua altura: ")
+		inputAltura, _ := reader.ReadString('\n')
+		inputAltura = strings.TrimSpace(inputAltura)
+		inputAltura = strings.ReplaceAll(inputAltura, ",", ".")
+		altura, err := strconv.ParseFloat(inputAltura, 64)
 
-	// Exibicao com duas casa decimais usando %2f
-	fmt.Printf("\nSeu IMC é: %2f\n", imc)
+		if err != nil || altura <= 0 {
+			fmt.Println("Erro: Digite uma altura válida e maior que zero.")
+			continue
+		}
 
-	// Lógica de Classificação
-	if imc < 18.5 {
-		fmt.Println("Status: Você está abaixo do peso")
-	} else if imc >= 18.5 && imc <= 24.9 {
-		fmt.Println("Status: Seu peso está normal")
-	} else {
-		fmt.Println("Status: Você está acima do peso")
+		imc := peso / (altura * altura)
+		fmt.Printf("Seu IMC é: %.2f\n", imc)
+
+		// Lógica simplificada de status
+		switch {
+		case imc < 18.5:
+			fmt.Println("Status: Abaixo do peso")
+		case imc <= 24.9:
+			fmt.Println("Status: Peso normal")
+		case imc <= 29.9:
+			fmt.Println("Status: Sobrepeso")
+		default:
+			fmt.Println("Status: Obesidade")
+		}
 	}
 }
