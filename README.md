@@ -42,7 +42,7 @@ go run main.go
 
 ---
 
-Desenvolvido com ☕ por [Adauri Developer](https://www.google.com/search?q=https://github.com/adaurideveloper-sudo)
+Desenvolvido com ☕ por Adauri Developer(https://www.google.com/search?q=https://github.com/adaurideveloper-sudo)
 
 
 
